@@ -25,9 +25,9 @@ app.post("/url-telegram", (req, res) => {
 });
 
 // COMANDOS
-bot.command("test", require("./commands/test"));
-bot.command("tiempo", require("./commands/tiempo"));
-bot.command("donde", require("./commands/donde"));
+bot.command("test", require("/test"));
+bot.command("tiempo", require("/tiempo"));
+bot.command("donde", require("/donde"));
 
 bot.on("text", async (ctx) => {
   const response = await client.message(ctx.message.text);
